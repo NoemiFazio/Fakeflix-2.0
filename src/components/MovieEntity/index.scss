@@ -1,0 +1,91 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.MovieEntity {
+  @include flex-element();
+
+  background-color: rgb(22 22 22);
+  color: white;
+  text-transform: uppercase;
+
+  &__info {
+    @include flex-element(column, space-between, flex-end);
+
+    width: 22%;
+    padding: 20px;
+
+    &--title {
+      transform: translate(100px, 120px);
+      h1 {
+        font-size: 4rem;
+        color: $base-color;
+      }
+    }
+
+    &--bottom {
+      position: relative;
+      width: 100%;
+      align-self: flex-end;
+      font-weight: bold;
+      font-size: 0.9rem;
+
+      p:nth-child(1),
+      p:nth-child(3) {
+        color: rgb(169, 169, 169);
+      }
+
+      ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      &--tagline {
+        position: absolute;
+        top: 0;
+        right: -30px;
+        writing-mode: vertical-rl;
+        font-size: 1.5rem;
+        font-weight: bold;
+        height: 300px;
+        transform: translateY(-120px);
+      }
+    }
+  }
+
+  &__poster {
+    width: 56%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  &__book {
+    @include flex-element(column-reverse);
+
+    width: 22%;
+
+    &--btn {
+      width: 100px;
+      height: 100px;
+      padding: 20px 30px;
+      border: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.65);
+      transform: translate(-49px, -120px);
+      transition: all 1s;
+      border-radius: 50px;
+      font-size: medium;
+      color: white;
+      background-color: $base-color;
+      /* box-shadow: 0 0 10px 10px hsla(264, 65%, 22%, 0.247); */
+
+      &:hover {
+        background-color: #1a003f;
+        color: $base-color;
+        box-shadow: 0 0 5px 5px #f22e2e50;
+        background-color: white;
+      }
+    }
+  }
+}

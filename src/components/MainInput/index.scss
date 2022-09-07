@@ -1,0 +1,48 @@
+@import "../../styles/_mixins.scss";
+
+.MainInput {
+  @include flex-element(row, flex-end);
+  height: 40px;
+
+  position: absolute;
+  margin-top: 20px;
+
+  width: 200px;
+  right: 0px;
+
+  border-radius: 8px;
+  transition: all 0.35s;
+
+  input {
+    padding-left: 0;
+
+    width: 0;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    color: #1a1a1a;
+    border-radius: 10px;
+
+    &.searchInput {
+      width: 240px;
+      padding-right: 14px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  button {
+    max-width: 100px;
+    border: 0;
+    font-weight: bold;
+    background-color: white;
+    border-left: 1px solid lightgrey;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+
+  .icon:hover {
+    color: #f22e2e !important;
+  }
+}

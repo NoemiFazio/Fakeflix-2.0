@@ -1,0 +1,30 @@
+@mixin flex-element(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap,
+  $gap: 0px
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+// @mixin position(
+//   $position: static,
+//   $top: auto,
+//   $right: auto,
+//   $bottom: auto,
+//   $left: auto,
+//   $z-index: 0
+// ) {
+//   position: $position;
+//   top: $top;
+//   right: $right;
+//   bottom: $bottom;
+//   left: $left;
+//   z-index: $z-index;
+// }

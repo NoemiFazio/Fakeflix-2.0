@@ -1,0 +1,15 @@
+.LikeBtn {
+  position: absolute;
+
+  left: 2px;
+  transition: transform 0.55s;
+
+  .icon {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+      color: rgba(255, 0, 0, 0.518) !important;
+    }
+  }
+}

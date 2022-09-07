@@ -1,0 +1,39 @@
+@import "../../styles/_mixins.scss";
+
+.counter {
+  @include flex-element(row, flex-start, center, nowrap, 5px);
+
+  margin: 5px 0;
+  height: 20px;
+  font-size: 20px;
+
+  p {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0 15px;
+  }
+
+  button {
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #f22e2e, #f22e2e);
+    background-image: -moz-linear-gradient(top, #f22e2e, #f22e2e);
+    background-image: -ms-linear-gradient(top, #f22e2e, #f22e2e);
+    background-image: -o-linear-gradient(top, #f22e2e, #f22e2e);
+    background-image: linear-gradient(to bottom, #f22e2e, #f22e2e);
+    color: #ffffff;
+    font-size: 20px;
+    height: 32px;
+    width: 40px;
+    padding: 0px 12px 0px 12px;
+    text-decoration: none;
+    transition: 0.45s;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
