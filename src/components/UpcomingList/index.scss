@@ -1,12 +1,11 @@
 @import "../../styles/_mixins.scss";
 
 .UpcomingList {
-  @include flex-element(column, center, center, wrap, 20px);
+  @include flex-element(column, center, flex-start, wrap, 20px);
 
   width: 100%;
   height: fit-content;
   margin: 20px 0px;
-  // padding: 0, 10px;
 
   &_title {
     color: white;
@@ -19,7 +18,6 @@
 
     padding-bottom: 10px;
     width: 100%;
-    // S
 
     overflow-x: scroll;
     overflow-y: hidden;
@@ -48,44 +46,35 @@
 
 @media only screen and (min-width: 767px) {
   .UpcomingList {
-    @include flex-element(column, center, center, wrap, 20px);
-
-    width: 100%;
-    height: fit-content;
-    margin: 20px 0;
-
     &_title {
-      color: white;
-      margin: 0;
-      padding: 0;
+      font-size: 1.5em;
     }
 
     .UpcomingList_content {
-      @include flex-element(row, flex-start, stretch, nowrap, 20px);
-
-      padding-bottom: 10px;
-      width: 800px;
-      overflow-x: scroll;
-      overflow-y: hidden;
+      width: 100%;
 
       .upcomingStyle {
-        @include flex-element(column, center);
-
-        position: relative;
         min-width: 150px;
         min-height: 200px;
         max-width: 150px;
         max-height: 200px;
-        padding: 20px;
-        margin-top: 20px;
-        border-radius: 20px;
-        color: white;
-        background-color: black;
-        cursor: pointer;
+      }
+    }
+  }
+}
 
-        h3 {
-          font-size: 20px !important;
-        }
+@media only screen and (min-width: 1290px) {
+  .UpcomingList {
+    &_title {
+      font-size: 30px;
+    }
+
+    .UpcomingList_content {
+      .upcomingStyle {
+        min-width: 150px;
+        min-height: 200px;
+        max-width: 150px;
+        max-height: 200px;
       }
     }
   }

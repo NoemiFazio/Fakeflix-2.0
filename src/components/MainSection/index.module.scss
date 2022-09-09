@@ -27,7 +27,6 @@
 
     .title {
       margin-top: 0;
-      color: $base-color;
       color: white;
       font-size: 25px;
     }
@@ -61,42 +60,33 @@
 
 @media only screen and (min-width: 767px) {
   .MainSection {
-    @include flex-element(column, flex-start, stretch, nowrap, 0px);
+    .left {
+      @include flex-element(column, space-around);
 
-    padding: 20px 30px;
-    background: rgb(30, 30, 30);
-    background-image: linear-gradient(
-        rgba(15, 10, 10, 0.949),
-        rgba(0, 0, 0, 0.285),
-        rgba(15, 10, 10, 0.862)
-      ),
-      url("../../images/fakeflix-hero.jpg");
+      .title {
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+  }
+}
 
-    height: fit-content;
-    z-index: 0;
-
+@media only screen and (min-width: 1290px) {
+  .MainSection {
     .container {
       @include flex-element(row, space-around);
-
-      height: fit-content;
     }
 
     .left {
       @include flex-element(column, space-around);
 
-      // width: 1000px;
-      // align-items: center;
-
       .title {
-        color: $base-color;
-        color: white;
         font-size: 40px;
+        text-align: start;
       }
     }
 
     .right {
-      @include flex-element(column, center, center);
-
       width: 1000px;
     }
   }

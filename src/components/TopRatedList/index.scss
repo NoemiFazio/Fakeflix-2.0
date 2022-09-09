@@ -2,12 +2,11 @@
 @import "../../styles/_variables.scss";
 
 .TopRatedList {
-  @include flex-element(column, center, center, wrap, 20px);
+  @include flex-element(column, center, flex-start, wrap, 20px);
 
   width: 100%;
   height: fit-content;
   margin: 20px 0px;
-  // padding: 0 20px;
 
   &_title {
     color: white;
@@ -18,7 +17,6 @@
   &_content {
     @include flex-element(row, space-around, stretch, wrap, 20px);
 
-    // min-width: 360px;
     padding: 10px 0;
 
     .topRatedStyle {
@@ -47,43 +45,43 @@
 
 @media only screen and (min-width: 767px) {
   .TopRatedList {
-    @include flex-element(column, center, center, wrap, 20px);
-
     width: 100%;
     height: fit-content;
-    margin: 20px 0;
 
+    &_content {
+      .topRatedStyle {
+        width: 200px;
+        min-width: 200px;
+        min-height: 50px;
+        max-width: 290px;
+        max-height: 50px;
+        padding: 25px;
+
+        h3 {
+          font-size: 15px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1290px) {
+  .TopRatedList {
     &_title {
-      color: white;
-      margin: 0;
-      padding: 0;
+      font-size: 30px;
     }
 
     &_content {
       @include flex-element(row, space-between, stretch, wrap, 20px);
 
-      width: 800px;
-      padding-bottom: 10px;
+      width: 100%;
 
       .topRatedStyle {
         @include flex-element(column, center);
 
         position: relative;
-        width: 200px;
+        width: 250px;
         height: 300px;
-        min-width: 200px;
-        min-height: 50px;
-        max-width: 290px;
-        max-height: 50px;
-        cursor: pointer;
-        padding: 25px;
-        border-radius: 20px;
-        color: white;
-        background-color: black;
-
-        h3 {
-          font-size: 15px !important;
-        }
       }
     }
   }
