@@ -8,12 +8,15 @@ const LikeBtn = ({ data, favouriteList, setFavouriteList, isBtnVisible }) => {
 
   const handleClick = () => {
     const likedValue = localStorage.getItem(`is ${data.title} Liked?`);
+    // const liked = favouriteList.find(
+    //   (liked) => liked.title === `${data.title}`
+    // );
 
     if (isClicked === true) {
       setIsClicked(!isClicked);
       localStorage.setItem(`is ${data.title} Liked?`, isClicked);
 
-      localStorage.setItem("favourites", JSON.stringify(favouriteList));
+      // localStorage.setItem("favourites", JSON.stringify(favouriteList));
 
       setFavouriteList([
         ...favouriteList,

@@ -1,0 +1,103 @@
+@import "../../styles/_mixins.scss";
+@import "../../styles/variables.scss";
+
+.MainSection {
+  @include flex-element(column, flex-start, stretch, nowrap, 0px);
+
+  padding: 20px 30px;
+  background: rgb(30, 30, 30);
+  background-image: linear-gradient(
+      rgba(15, 10, 10, 0.949),
+      rgba(0, 0, 0, 0.285),
+      rgba(15, 10, 10, 0.862)
+    ),
+    url("../../images/fakeflix-hero.jpg");
+
+  height: fit-content;
+  z-index: 0;
+
+  .container {
+    @include flex-element(column, center, center);
+
+    height: fit-content;
+  }
+
+  .left {
+    @include flex-element(column, center, center);
+
+    .title {
+      margin-top: 0;
+      color: $base-color;
+      color: white;
+      font-size: 25px;
+    }
+  }
+
+  .right {
+    @include flex-element(column, center, center);
+
+    width: 100%;
+  }
+
+  .UpBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 18px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 9999999999999999999999;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.42);
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .MainSection {
+    @include flex-element(column, flex-start, stretch, nowrap, 0px);
+
+    padding: 20px 30px;
+    background: rgb(30, 30, 30);
+    background-image: linear-gradient(
+        rgba(15, 10, 10, 0.949),
+        rgba(0, 0, 0, 0.285),
+        rgba(15, 10, 10, 0.862)
+      ),
+      url("../../images/fakeflix-hero.jpg");
+
+    height: fit-content;
+    z-index: 0;
+
+    .container {
+      @include flex-element(row, space-around);
+
+      height: fit-content;
+    }
+
+    .left {
+      @include flex-element(column, space-around);
+
+      // width: 1000px;
+      // align-items: center;
+
+      .title {
+        color: $base-color;
+        color: white;
+        font-size: 40px;
+      }
+    }
+
+    .right {
+      @include flex-element(column, center, center);
+
+      width: 1000px;
+    }
+  }
+}

@@ -8,13 +8,15 @@
 
   h1 {
     color: white;
+    margin: 0;
+    padding: 0;
   }
 
   .LikedList_content {
     @include flex-element(row, flex-start, stretch, nowrap, 20px);
 
     padding-bottom: 10px;
-    width: 1350px;
+    width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
 
@@ -22,10 +24,10 @@
       @include flex-element(column, center);
 
       position: relative;
-      min-width: 150px;
-      min-height: 200px;
-      max-width: 150px;
-      max-height: 200px;
+      min-width: 110px;
+      min-height: 160px;
+      max-width: 110px;
+      max-height: 160px;
       padding: 20px;
       margin-top: 20px;
       border-radius: 20px;
@@ -35,6 +37,48 @@
 
       h3 {
         font-size: 20px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .LikedList {
+    @include flex-element(column, center, center, wrap, 20px);
+
+    width: 100%;
+    height: fit-content;
+
+    h1 {
+      color: white;
+    }
+
+    .LikedList_content {
+      @include flex-element(row, flex-start, stretch, nowrap, 20px);
+
+      padding-bottom: 10px;
+      width: 1350px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      .LikedStyle {
+        @include flex-element(column, center);
+
+        position: relative;
+        min-width: 150px;
+        min-height: 200px;
+        max-width: 150px;
+        max-height: 200px;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+
+        h3 {
+          font-size: 20px !important;
+        }
       }
     }
   }

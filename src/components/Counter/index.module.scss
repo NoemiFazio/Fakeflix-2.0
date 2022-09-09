@@ -27,13 +27,12 @@
     color: #ffffff;
     font-size: 20px;
     height: 32px;
-    width: 40px;
-    padding: 0px 12px 0px 12px;
+    width: 38px;
+    padding: 0px 12px 0px 7px;
     text-decoration: none;
     transition: 0.45s;
-
-    &:hover {
-      color: black;
-    }
+  }
+  .icon:hover {
+    color: black !important;
   }
 }

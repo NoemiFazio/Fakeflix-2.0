@@ -21,16 +21,23 @@ function App() {
 
   //scrooll con useref
   const movieEntity = useRef(null);
+  //scrollTop
+  const ScrollTop = useRef(null);
 
   return (
     <div className="App">
       {/* <Navbar movieEntity={movieEntity} /> */}
+      <div className="scrollTop" ref={ScrollTop}></div>
       <MainModal
         data={modalData}
         isVisibile={isModalVisibile}
         onModalClick={setModalVisibility}
       />
-      <MainSection modalVisibility={onHandleModal} movieEntity={movieEntity} />
+      <MainSection
+        modalVisibility={onHandleModal}
+        movieEntity={movieEntity}
+        ScrollTop={ScrollTop}
+      />
       <MainInput inputValue={inputValue} setInputValue={setInputValue} />
       <MovieEntity
         movieEntity={movieEntity}

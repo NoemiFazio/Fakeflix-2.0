@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { IconContext } from "react-icons";
 import { BsSearch } from "react-icons/bs";
+
 import "./index.scss";
 
 const MainInput = ({ inputValue, setInputValue }) => {
@@ -34,8 +35,9 @@ const MainInput = ({ inputValue, setInputValue }) => {
         style: {
           color: "#1a003f",
           transition: "all 1s",
-          width: "25px",
-          height: "25px",
+          width: "22px",
+          height: "22px",
+          paddingTop: "5px",
         },
         className: "icon",
       }}

@@ -15,11 +15,12 @@
 
   input {
     padding-left: 0;
-
+    height: 30px;
     width: 0;
     border: 0;
     outline: none;
     font-weight: bold;
+    font-size: 15px;
     color: #1a1a1a;
     border-radius: 10px;
 
@@ -31,13 +32,14 @@
   }
 
   button {
-    max-width: 100px;
+    width: 32px;
+    height: 32px;
     border: 0;
     font-weight: bold;
     background-color: white;
     border-left: 1px solid lightgrey;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 18px;
     margin-left: 20px;
     border-radius: 10px;
   }

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 
 const MainModal = ({ data, isVisibile, onModalClick }) => {
-  const { title, overview, poster_path, id } = data;
+  const { title, overview, poster_path, id, backdrop_path } = data;
   // const [isMarked, setMarked] = useState(false);
 
   // useEffect(() => {
