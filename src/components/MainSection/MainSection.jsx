@@ -8,6 +8,7 @@ import UpcomingList from "../UpcomingList";
 import LikedList from "../LikedList";
 import Navbar from "../Navbar";
 import Counter from "../Counter";
+import ThemeBtn from "../ThemeBtn/ThemeBtn";
 import styles from "./index.module.scss";
 
 const MainSection = ({ modalVisibility, movieEntity, ScrollTop }) => {
@@ -61,6 +62,7 @@ const MainSection = ({ modalVisibility, movieEntity, ScrollTop }) => {
     >
       <div className={styles.MainSection}>
         <Navbar movieEntity={movieEntity} ref={ScrollTop} />
+        <ThemeBtn />
         <div className={styles.container}>
           <div className={styles.left}>
             <h1 className={styles.title}>Now on screen</h1>

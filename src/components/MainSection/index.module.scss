@@ -5,13 +5,13 @@
   @include flex-element(column, flex-start, stretch, nowrap, 0px);
 
   padding: 20px 30px;
-  background: rgba(0, 0, 0, 0.865);
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.865),
-      rgba(0, 0, 0, 0.799),
-      rgba(0, 0, 0, 0.865)
-    ),
-    url("../../images/fakeflix-hero.jpg");
+  // background: rgba(0, 0, 0, 0.865);
+  // background-image: linear-gradient(
+  //     rgba(0, 0, 0, 0.865),
+  //     rgba(0, 0, 0, 0.799),
+  //     rgba(0, 0, 0, 0.865)
+  //   ),
+  //   url("../../images/fakeflix-hero.jpg");
 
   height: fit-content;
   z-index: 0;

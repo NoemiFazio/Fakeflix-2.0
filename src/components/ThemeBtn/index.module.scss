@@ -1,0 +1,12 @@
+.button {
+  color: black;
+  border: none;
+  background: none;
+  width: 35px;
+  transition: 0.45s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(248, 248, 255, 0.361);
+  }
+}
